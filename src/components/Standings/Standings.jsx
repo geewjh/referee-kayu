@@ -1,4 +1,5 @@
 import StandingsHeader from "./StandingsHeader";
+import StandingsRow from "./StandingsRow";
 
 const headers = [
   "Position",
@@ -8,8 +9,8 @@ const headers = [
   "W",
   "D",
   "L",
-  "F",
-  "A",
+  "GF",
+  "GA",
   "GD",
   "Points",
   "Form",
@@ -47,6 +48,12 @@ const Standings = ({ standings }) => {
             })}
           </tr>
         </thead>
+
+        <tbody>
+          {standings.response[0].league.standings[0].map((team) => (
+            <StandingsRow key={team.team.id} team={team} />
+          ))}
+        </tbody>
       </table>
     </div>
   );
