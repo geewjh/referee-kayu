@@ -10,7 +10,7 @@ const StandingsRow = ({ team }) => {
           width={50}
         />
       </td>
-      <td className="text-left">{team.team.name}</td>
+      <td className="italic text-left">{team.team.name}</td>
       <td>{team.all.played}</td>
       <td>{team.all.win}</td>
       <td>{team.all.draw}</td>
@@ -19,7 +19,7 @@ const StandingsRow = ({ team }) => {
       <td>{team.all.goals.against}</td>
       <td>{team.goalsDiff}</td>
       <td>{team.points}</td>
-      <td>{team.form}</td>
+      <td className="italic">{team.form}</td>
     </tr>
   );
 };

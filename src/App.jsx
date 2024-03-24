@@ -3,11 +3,11 @@ import NavBar from "./components/NavBar/NavBar";
 import { fetchStandings } from "./components/Standings/fetchStandings";
 import { Routes, Route } from "react-router-dom";
 import Standings from "./components/Standings/Standings";
-import { fetchSchedulesByLeague } from "./components/Scheduled/fetchSchedulesByLeague";
+import { fetchFixtures } from "./components/Scheduled/fetchFixtures";
 
 function App() {
   const [standings, setStandings] = useState([]);
-  const [schedules, setSchedules] = useState(null);
+  const [fixtures, setFixtures] = useState(null);
 
   useEffect(() => {
     const fetchStandingsData = async () => {
@@ -22,18 +22,16 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const fetchSchedulesData = async () => {
+    const fetchFixturesData = async () => {
       try {
-        const schedulesData = await fetchSchedulesByLeague();
-        setSchedules(schedulesData);
+        const fixturesData = await fetchFixtures();
+        setFixtures(fixturesData);
       } catch (error) {
         console.error(error);
       }
     };
-    fetchSchedulesData();
+    fetchFixturesData();
   }, []);
-
-  console.log(schedules);
 
   return (
     <div>

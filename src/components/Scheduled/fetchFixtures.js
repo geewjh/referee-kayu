@@ -1,4 +1,4 @@
-export const fetchSchedulesByLeague = async () => {
+export const fetchFixtures = async () => {
   const apiKey = import.meta.env.VITE_API_KEY;
   const url =
     "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=39&season=2023";

@@ -1,14 +1,17 @@
 import { GiWhistle } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { BiSolidStar } from "react-icons/bi";
+import { IoFootballOutline } from "react-icons/io5";
 
 const NavBar = () => {
   return (
     <nav className="navbar" data-theme="dim">
       <div className="navbar-start">
         <NavLink to="/" className="btn btn-ghost text-white text-2xl">
+          <IoFootballOutline />
+
           <div>
-            <span className="italic font-light">Referee Kayu</span>
+            <span className="font-black italic">Referee Kayu</span>
           </div>
           <GiWhistle className="text-3xl text-orange-100" />
         </NavLink>
