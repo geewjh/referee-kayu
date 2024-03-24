@@ -38,6 +38,17 @@ const tableHeaders = headers.map((header, index) => ({
 // console.log(tableHeaders);
 
 const Standings = ({ standings }) => {
+  if (
+    !standings ||
+    !standings.response ||
+    !standings.response[0] ||
+    !standings.response[0].league ||
+    !standings.response[0].league.standings ||
+    !standings.response[0].league.standings[0]
+  ) {
+    return null;
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="table table-xs">
