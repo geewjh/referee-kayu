@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Standings from "./components/Standings/Standings";
 import { fetchFixtures } from "./components/Scheduled/fetchFixtures";
 import Scheduled from "./components/Scheduled/Scheduled";
+import Finished from "./components/Finished/Finished";
 
 function App() {
   const [standings, setStandings] = useState([]);
@@ -43,6 +44,7 @@ function App() {
           element={<Standings standings={standings} />}
         />
         <Route path="/scheduled" element={<Scheduled fixtures={fixtures} />} />
+        <Route path="/finished" element={<Finished fixtures={fixtures} />} />
       </Routes>
     </div>
   );
