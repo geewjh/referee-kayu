@@ -4,6 +4,7 @@ import { fetchStandings } from "./components/Standings/fetchStandings";
 import { Routes, Route } from "react-router-dom";
 import Standings from "./components/Standings/Standings";
 import { fetchFixtures } from "./components/Scheduled/fetchFixtures";
+import Scheduled from "./components/Scheduled/Scheduled";
 
 function App() {
   const [standings, setStandings] = useState([]);
@@ -41,6 +42,7 @@ function App() {
           path="/standings"
           element={<Standings standings={standings} />}
         />
+        <Route path="/scheduled" element={<Scheduled fixtures={fixtures} />} />
       </Routes>
     </div>
   );
