@@ -20,7 +20,7 @@ const NavBar = () => {
       <div className="italic font-light navbar-center">
         <ul className="menu menu-horizontal">
           <li className="px-12">
-            <NavLink to="/">Teams</NavLink>
+            <NavLink to="/teams">Teams</NavLink>
           </li>
           <li className="px-12">
             <NavLink to="/finished">Finished</NavLink>

@@ -29,7 +29,7 @@ const Finished = ({ fixtures }) => {
   };
 
   const fixturesMFGroupedByDate = groupMFByDate(sortedFixturesMF);
-
+  console.log(fixturesMFGroupedByDate);
   return (
     <div>
       {Object.entries(fixturesMFGroupedByDate).map(([date, fixtures]) => (
